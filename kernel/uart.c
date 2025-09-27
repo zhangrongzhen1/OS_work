@@ -6,7 +6,7 @@
 #define UART0_THR (volatile unsigned char *)(UART0_BASE + 0x00)
 #define UART0_LSR   (volatile unsigned char *)(UART0_BASE + 0x05)  // 状态寄存器
 // LSR 寄存器位定义
-#define LSR_THRE    0x20  // 发送保持寄存器空 (Transmit Holding Register Empty)
+#define LSR_THRE    0x20  // 发送保持寄存器空 
 // 输出单个字符
 void uart_putc(char c)
  { while ((*UART0_LSR & LSR_THRE) == 0); // 等待发送缓冲区空

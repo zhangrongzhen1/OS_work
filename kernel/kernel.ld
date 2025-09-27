@@ -1,7 +1,6 @@
 /* 修改后的链接脚本 */
 OUTPUT_ARCH("riscv")
 ENTRY(_entry)
-
 SECTIONS
 {
     /* 内核加载地址 */
